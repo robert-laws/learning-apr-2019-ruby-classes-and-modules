@@ -9,7 +9,7 @@ class Radio
   @@default_am_freq = 1010.0
   
   @@audio_samples = [
-    "Zebra park",
+    "Zebra parky",
     "Here Comes the Sun",
     "Like a Rollin' Stone",
     "I Heard It Through the Grapevine",
@@ -55,7 +55,11 @@ class Radio
     puts "The radio plays: " + audio_stream
   end
 
-  private
+  protected
+
+    def hello
+      "hello there..."
+    end
   
     def default_freq
       @band == 'AM' ? @@default_am_freq : @@default_fm_freq
